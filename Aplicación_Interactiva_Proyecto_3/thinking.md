@@ -1,22 +1,3 @@
----
-name: Fase 3 Streamlit MLOps
-overview: Plan para construir la aplicación Streamlit de Fase 3 sobre el modelo Random Forest entrenado con features LLM, incluyendo predicción interactiva, simulación de drift y panel de métricas del modelo — reconstruyendo artefactos .pkl que el notebook no serializó.
-todos:
-  - id: train-script
-    content: Crear scripts/train_model.py que reproduzca RF+LLM (rs=42) y exporte modelo_final.pkl, preprocessor.pkl, scaler.pkl, model_metadata.json y data/referencia.csv
-    status: completed
-  - id: utils-core
-    content: Implementar utils/preprocessing.py, prediction.py, drift.py y visualization.py con schema de 16 features inferido del CSV
-    status: completed
-  - id: app-tabs
-    content: "Desarrollar app.py con 3 pestañas: Predicción (SHAP+controles), Simulador Drift (alteraciones+semáforo PSI), Info Modelo (métricas reconstruidas)"
-    status: completed
-  - id: docs-deps
-    content: Generar requirements.txt y README.md con instrucciones streamlit run app.py y validaciones de smoke test
-    status: completed
-isProject: false
----
-
 # Plan de Implementación — Fase 3 (Proyecto 3)
 
 ## 1. Hallazgos inferidos del análisis automático
