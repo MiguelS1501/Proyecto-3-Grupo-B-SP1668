@@ -10,7 +10,7 @@ Aplicación interactiva para predicción de gravedad de accidentes de tránsito 
 ## Instalación
 
 ```bash
-cd Proyecto3
+cd Aplicación_Interactiva_Proyecto_3
 pip install -r requirements.txt
 ```
 
