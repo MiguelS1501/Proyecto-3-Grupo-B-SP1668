@@ -135,7 +135,7 @@ preprocessor = ColumnTransformer([
 ## 2. Estructura de carpetas objetivo
 
 ```
-Proyecto3/
+Aplicación_Interactiva_Proyecto_3/
 ├── app.py                          # Entry point Streamlit (3 pestañas)
 ├── models/
 │   ├── modelo_final.pkl            # best_rf2 entrenado
@@ -333,12 +333,12 @@ Cada cambio recalcula métricas de drift y actualiza visualizaciones before/afte
 
 | Módulo                                                       | Responsabilidades                                                                       |
 | ------------------------------------------------------------ | --------------------------------------------------------------------------------------- |
-| `[scripts/train_model.py](Proyecto3/scripts/train_model.py)` | Reproduce entrenamiento RF+LLM; exporta `.pkl`, `referencia.csv`, `model_metadata.json` |
-| `[utils/preprocessing.py](Proyecto3/utils/preprocessing.py)` | Schema de features, defaults desde mediana/modas de referencia, validación              |
-| `[utils/prediction.py](Proyecto3/utils/prediction.py)`       | Carga lazy, predict, predict_proba, explicación textual, SHAP                           |
-| `[utils/drift.py](Proyecto3/utils/drift.py)`                 | Alteraciones de dataset, PSI, KS, deltas, score global, semáforo                        |
-| `[utils/visualization.py](Proyecto3/utils/visualization.py)` | Plotly helpers reutilizables (KDE, box, confusion matrix, ROC, semáforo)                |
-| `[app.py](Proyecto3/app.py)`                                 | 3 tabs, manejo de errores, estado de sesión para dataset alterado                       |
+| `[scripts/train_model.py](Aplicación_Interactiva_Proyecto_3/scripts/train_model.py)` | Reproduce entrenamiento RF+LLM; exporta `.pkl`, `referencia.csv`, `model_metadata.json` |
+| `[utils/preprocessing.py](Aplicación_Interactiva_Proyecto_3/utils/preprocessing.py)` | Schema de features, defaults desde mediana/modas de referencia, validación              |
+| `[utils/prediction.py](Aplicación_Interactiva_Proyecto_3/utils/prediction.py)`       | Carga lazy, predict, predict_proba, explicación textual, SHAP                           |
+| `[utils/drift.py](Aplicación_Interactiva_Proyecto_3/utils/drift.py)`                 | Alteraciones de dataset, PSI, KS, deltas, score global, semáforo                        |
+| `[utils/visualization.py](Aplicación_Interactiva_Proyecto_3/utils/visualization.py)` | Plotly helpers reutilizables (KDE, box, confusion matrix, ROC, semáforo)                |
+| `[app.py](Aplicación_Interactiva_Proyecto_3/app.py)`                                 | 3 tabs, manejo de errores, estado de sesión para dataset alterado                       |
 
 
 ---
@@ -378,7 +378,7 @@ Cada cambio recalcula métricas de drift y actualiza visualizaciones before/afte
 **Smoke test manual**:
 
 ```bash
-cd Proyecto3
+cd Aplicación_Interactiva_Proyecto_3
 python scripts/train_model.py
 streamlit run app.py
 ```
@@ -387,7 +387,7 @@ streamlit run app.py
 
 ## 11. Entregables y orden de ejecución (Fase 3 — post-aprobación)
 
-1. Crear estructura `Proyecto3/` y copiar `accidentes_cr_con_llm.csv` → `data/`
+1. Crear estructura `Aplicación_Interactiva_Proyecto_3/` y copiar `accidentes_cr_con_llm.csv` → `data/`
 2. Implementar `scripts/train_model.py` → generar artefactos en `models/` y `data/referencia.csv`
 3. Implementar módulos `utils/` (con comentarios en español)
 4. Implementar `app.py` con 3 pestañas
