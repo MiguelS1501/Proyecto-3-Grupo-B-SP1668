@@ -41,7 +41,7 @@ La app se abrirá en `http://localhost:8501`.
 ## Estructura del proyecto
 
 ```
-Proyecto3/
+Aplicación_Interactiva_Proyecto_3/
 ├── app.py
 ├── models/
 │   ├── modelo_final.pkl
